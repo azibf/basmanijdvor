@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<section class="page-section cta" style="background-color: rgba(174, 171, 171, 0.5);">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded" >
+                            <form action="{% url 'contact' %}" method="post">
+                                {% csrf_token %}
+                                <div class="container">
+                                    <div class="row" id="name">
+                                        <div class="col form-label text-xl" style="font-family: Roboto;}" align="right">{{ form.name.label }}</div>
+                                        <div class="col" style="font-family: Roboto;}">{{ form.name }}</div>
+                                    </div>
+                                    <br>
+                                    <div class="row" id="email">
+                                        <div class="col form-label text-xl" style="font-family: Roboto;}" align="right">{{ form.email.label }}</div>
+                                        <div class="col" style="font-family: Roboto;}">{{ form.email }}</div>
+                                    </div>
+                                    <br>
+                                    <div class="row" id="doctor">
+                                        <div class="col form-label text-xl" style="font-family: Roboto;}" align="right">{{ form.doctor.label }}</div>
+                                        <div class="col" style="font-family: Roboto;}">{{ form.doctor }}</div>
+                                    </div>
+                                    <br>
+                                </ul>
+
+                                <button class="btn btn-outline-primary" type="submit" style="font-family: Roboto;}">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+{% endblock %}

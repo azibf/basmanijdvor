@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}О Музее Утраченной Москвы{% endblock %}
+
+{% block content %}
+<section class="page-section about-heading">
+            <div class="container">
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'assets/img/aboutcenter.jpg' %}" alt="..." />
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-lower">План здания</span>
+                                </h2>
+                                <p class="mb-0" align="justify" style="text-indent: 25px;">В качестве социальной составляющей предлагается сделать центр здоровья, направленный на «пассивную рекреацию», то есть на простое расслабление и снятие эмоционального напряжения. В отличии от больницы, данный центр будет доступен и актуален для всех слоев населения.</p>
+                                <br>
+                                <p class="mb-0" align="justify" style="text-indent: 25px;">
+                                    Центр по расслаблению и снятию напряжения будет способствовать повышению общего уровня самочувствия посетителей и транслировать ценности здорового образа жизни, что является актуальным для жителей мегаполиса.
+                               </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section cta" style="background-color: rgba(174, 171, 171, 0.5);">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded" >
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-lower">ПЛАН ЗДАНИЯ</span>
+                            </h2>
+                            <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'assets/img/aboutcenter2.jpg' %}" alt="..." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

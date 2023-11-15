@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Центр{% endblock %}
+
+{% block content %}
+<div class="px-6 py-6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <br>
+                            {% for specialization in specializations %}
+                                <h2 class="section-heading mb-5">
+                                    <span class="section-heading-lower">{{ specialization.name }}</span>
+                                </h2>
+                                <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                                {% for doctor in doctors %}
+                                    {% if doctor.specialization == specialization %}
+                                        <li class="list-unstyled-item list-hours-item d-flex">
+                                            {{ doctor.name }}
+                                            <span class="ms-auto">{{ doctor.description }}</span>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                                </ul>
+                            {% endfor %}
+                            <p class="address mb-5">
+                                <div class="intro-button mx-auto"><a class="btn btn-outline-primary btn-xl" href="/contact/">Записаться на прием</a></div>
+                            </p>
+                            <br>
+                            <p class="mb-0">
+                                <small><em>Будьте здоровы</em></small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+{% endblock %}
